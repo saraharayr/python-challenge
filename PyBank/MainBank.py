@@ -1,16 +1,16 @@
 # import dependencies
-import csv
+import csv, os
 
 #create path to file
 budgetdata = "/Users/saraharayratti/Desktop/python-challenge/PyBank/Resources/budget_data.csv"
 
-
+#create variables
 total_months = 0
 changing_profit = 0
 monthly_change = []
 profit_variability = []
 greatest_increase = ["", 0]
-greatest_decrease = ["", 1111111111]
+greatest_decrease = ["", 0]
 total_profit = 0
 
 #open as cvs file
@@ -45,7 +45,6 @@ profit_avg = sum(profit_variability) / len(profit_variability)
 #create analysis and print it
 analysis = (
     f"\nFinancial Analysis\n"
-    f"-----------------------\n"
     f"Total Months: {total_months}\n"
     f"Total Profit: ${total_profit}\n"
     f"Average Change: ${profit_avg}\n"
